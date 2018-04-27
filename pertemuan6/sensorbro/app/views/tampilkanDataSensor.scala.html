@@ -1,0 +1,12 @@
+@(thelist: List[models.DataSensor])
+<h1>The list</h1>
+
+<ul>
+
+            @for( datasensor <- thelist ){
+
+                        <li>@datasensor.toString()  <a href="@routes.Application.deleteDataSensor( datasensor.id )">Delete</a></li>
+
+            }
+
+</ul>
